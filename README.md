@@ -4,14 +4,14 @@ Este projeto é um **template inicial** para trabalho com agentes inteligentes e
 
 ## 📋 Índice
 
-- [Visão Geral](#visão-geral)
-- [Estrutura do Projeto](#estrutura-do-projeto)
-- [Principais Componentes](#principais-componentes)
-- [Configuração](#configuração)
-- [Como Usar](#como-usar)
-- [Criando Novas Tools](#criando-novas-tools)
-- [Scripts Disponíveis](#scripts-disponíveis)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Visão Geral](#-visão-geral)
+- [Estrutura do Projeto](#-estrutura-do-projeto)
+- [Principais Componentes](#-principais-componentes)
+- [Configuração](#-configuração)
+- [Como Usar](#-como-usar)
+- [Criando Novas Tools](#-criando-novas-tools)
+- [Scripts Disponíveis](#-scripts-disponíveis)
+- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
 
 ## 🎯 Visão Geral
 
