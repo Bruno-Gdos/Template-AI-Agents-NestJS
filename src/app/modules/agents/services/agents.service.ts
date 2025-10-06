@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { Injectable } from '@nestjs/common';
 import { ChatOpenAI } from '@langchain/openai';
 import { createReactAgent } from '@langchain/langgraph/prebuilt';
@@ -7,6 +5,7 @@ import { Tools } from 'src/app/tools/tool.service';
 
 interface GetAnswerResponse {
   answer: string;
+  tools: any;
 }
 
 @Injectable()
@@ -38,8 +37,12 @@ export class AgentService {
     if (response.error) {
       throw new Error(`Error: ${response.error.message}`);
     } else {
+      const toolsUsed = response.messages
+        .filter((msg) => msg.tool_calls && msg.tool_calls.length > 0)
+        .flatMap((msg) => msg.tool_calls?.map((call) => call.name) || []);
       return {
         answer: response.messages[response.messages.length - 1].content,
+        tools: toolsUsed,
       };
     }
   }
